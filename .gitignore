@@ -1,0 +1,23 @@
+# Rust
+/target
+/debug
+Cargo.lock
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Project Specific
+*.log
+*.qasm
+err*.log
+knowledge_log.txt
+build_error.txt
+
+# Editor / User
+.vscode/
+.idea/
+*.swp

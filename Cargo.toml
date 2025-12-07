@@ -1,0 +1,35 @@
+[package]
+name = "sentinel-hypervisor"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.32", features = ["full"] }
+tokio-tungstenite = { version = "0.20", features = ["rustls-tls-native-roots"] }
+futures-util = "0.3"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+simd-json = "0.13"
+reqwest = { version = "0.11", features = ["json", "rustls-tls"] }
+url = "2.4"
+chrono = "0.4"
+# Pure Rust FIPS 204 (ML-DSA / Dilithium)
+fips204 = "0.4"
+# PyO3: Embed Python Interpreter for Qiskit/Q# Interop
+pyo3 = { version = "0.20", features = ["auto-initialize"] }
+
+
+rand = "0.8"
+rand_distr = "0.4"
+hex = "0.4"
+sha3 = "0.10"
+# SRE & Observability Stack
+log = "0.4"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["json", "env-filter"] }
+tracing-appender = "0.2"
+
+thiserror = "1.0" # Structuring Errors properly
+
+dotenv = "0.15"
+# bitflags for LTL might be useful, or just custom
